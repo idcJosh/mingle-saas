@@ -1,0 +1,8 @@
+# Ignore the node_modules folder to prevent Windows/Linux conflicts
+node_modules
+
+# Ignore environment variables to protect database secrets
+.env
+
+# Ignore the Git folder to keep the image small
+.git
