@@ -37,4 +37,5 @@ router.get('/:topic/active', verifyToken, async (req, res) => {
     }
 });
 
+// Export the router to make it visible to app.js
 module.exports = router;
