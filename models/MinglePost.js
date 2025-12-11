@@ -13,7 +13,7 @@ const MinglePostSchema = mongoose.Schema({
     topic: {
         type: String,
         required: true,
-        enum: ['Politics', 'Health', 'Sport', 'Tech'] // Restricts input to only these 4
+        enum: ['Politics', 'Health', 'Sport', 'Tech'] // Restricts input
     },
     
     // Owner Information
@@ -50,9 +50,10 @@ const MinglePostSchema = mongoose.Schema({
         type: Number,
         default: 0
     },
+    
+    // --- FIXED SECTION: Matching mingle.js ---
     comments: [{
-        userId: String,
-        userName: String,
+        ownerName: String,  // Changed from 'userName' to match your code
         text: String,
         date: { type: Date, default: Date.now }
     }]
